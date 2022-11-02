@@ -25,3 +25,12 @@ Feature: User able to Login
     Then User select "English (Australian)"
     And User clicks login button
     Then User gets error message as "Invalid username or password"
+
+  @Smoke
+  Scenario: Login with invalid username and Password
+    Given User navigates to website
+    When User enters invalid username
+    Then User enters invalid password
+    Then User select "English (Australian)"
+    And User clicks login button
+    Then User gets error message as "Invalid username or password"
